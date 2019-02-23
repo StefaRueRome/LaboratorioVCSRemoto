@@ -1,10 +1,16 @@
-num=int(input("Introduzca un número para calcular su cuadrado:"))
-cuadrado=(num*num)
-print("El cuadrado del número es:",cuadrado)
-
-num2=int(input("Introduzca un número para calcular su raiz cuadrada:"))
-raiz_cuadrada=(num2**(1/2))
-if num2<0:
-	print("El número no tiene raiz cuadrada definida")
+print("Solución de una ecuación cuadrática")
+a=int(input("Ingrese el primer valor:"))
+b=int(input("Ingrese el segundo valor:"))
+c=int(input("Ingrese el tercer valor:"))
+d=(((b*b)-(4*a*c))**1/2)
+x1=(((-1*b)+(d**1/2))/2*a)
+x2=(((-1*b)-(d**1/2))/2*a)
+if d>0:
+	print("La solución positiva es:",x1,"y la solución negativa es:",x2)
 else:
-	print("La raiz cuadrada es:",raiz_cuadrada)
+	if d==0:
+		(-1*b)/2*a
+	else:
+		if d<0:
+			print("No existe solución en los números reales")
+
